@@ -1,0 +1,94 @@
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Smart Pantry')
+        ),
+        body: AnimatedContainer(
+          width: 150.0,
+          height: 120.0,
+          duration: Duration(seconds: 1),
+          decoration: new BoxDecoration(
+                        color: Color.fromRGBO(60, 179, 113, 1.0),
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0))
+                      ),
+          child: Stack(
+            children: [
+              Positioned(
+                top: 20.0,
+                left: 0.0,
+                right: 0.0,
+                child: Text("Snacks",
+                  style: TextStyle(color: Colors.white, fontSize: 17.0),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Positioned(
+                top: 42.0,
+                left: 0.0,
+                right: 0.0,
+                child: Text("31%",
+                  style: TextStyle(color: Colors.white, fontSize: 17.0),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Positioned(
+                top: 70,
+                left: 0.0,
+                right: 0.0,
+                child: Image(
+                  image: NetworkImage("https://i.pinimg.com/originals/17/f7/79/17f779a323759417fa6e82d42308ffef.png"),
+                  height: 30,
+                  width: 30,
+                  color: Colors.white,
+                )
+              )
+            ],
+          )
+        )
+      )
+    ),
+  );
+}
+
+
+
+
+
+ Positioned(
+              top: 150,
+              left: 132,
+              height: 30,
+              width: 110,
+              child: OutlinedButton(
+                child: Text('          Fridge'),
+                style: OutlinedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  primary: Colors.grey,
+                  shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
+                ),
+                onPressed: () {
+                  print('Pressed');
+                },
+              )
+          ),
+
+          Positioned(
+            top: 150,
+            left: 200,
+            height: 30,
+            width: 75,
+            child: OutlinedButton(
+              child: Text('Pantry'),
+              style: OutlinedButton.styleFrom(
+                backgroundColor: Colors.white,
+                primary: Colors.black,
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(40))),
+              ),
+              onPressed: () {
+                print('Pressed');
+              },
+            )
+          ),
