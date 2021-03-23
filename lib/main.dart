@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
       home: Scaffold(
         backgroundColor: Color.fromRGBO(237, 246, 243, 1.0),
         body: TabContainer(),

@@ -14,12 +14,15 @@ class _Tab1State extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     print('build Tab1');
-    return Scaffold(
-        backgroundColor: Color.fromRGBO(237, 246, 243, 1.0),
-        body: Stack(
-          children: [
 
+    double height = MediaQuery.of(context).size.height;
+    return SingleChildScrollView(
+      child: SizedBox(
+        height: height,
+        child: Stack(
+          children: <Widget>[
             Positioned(
               top: 50,
               left: 20,
@@ -302,13 +305,10 @@ class _Tab1State extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                   style: TextStyle(fontSize: 21),
                 )
             ),
-
-
-
-
           ]
-        ),
-      );
+        )
+      ),
+    );
   }
 
   @override
